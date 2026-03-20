@@ -1,11 +1,19 @@
+
 .App {
   text-align: center;
+  background: linear-gradient(135deg, #f0f4f9 0%, #e0e7ef 100%);
+  min-height: 100vh;
+  color: #2a2a40;
 }
 
+
 .App-logo {
-  height: 40vmin;
-  pointer-events: none;
+  height: 48px;
+  width: 48px;
+  margin-right: 16px;
+  vertical-align: middle;
 }
+
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
@@ -13,19 +21,112 @@
   }
 }
 
+
 .App-header {
-  background-color: #282c34;
+  background-color: #2a2a40;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
+  color: #fff;
 }
 
-.App-link {
-  color: #61dafb;
+
+.App-link, .navbar .nav-link, .navbar-brand {
+  color: #4e8cff !important;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+.App-link:hover, .navbar .nav-link:hover, .navbar-brand:hover {
+  color: #1a5bb8 !important;
+}
+
+.navbar {
+  background: linear-gradient(90deg, #2a2a40 0%, #4e8cff 100%) !important;
+  box-shadow: 0 2px 8px rgba(46, 68, 120, 0.08);
+}
+.navbar .navbar-brand {
+  color: #fff !important;
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+}
+.navbar .nav-link {
+  color: #e0e7ef !important;
+  margin-right: 8px;
+}
+.navbar .nav-link.active, .navbar .nav-link:focus {
+  color: #ffd166 !important;
+}
+
+/* Table styles */
+.table {
+  background: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(46, 68, 120, 0.06);
+}
+.table thead {
+  background: #4e8cff;
+  color: #fff;
+}
+.table-striped > tbody > tr:nth-of-type(odd) {
+  background-color: #f0f4f9;
+}
+.table-bordered th, .table-bordered td {
+  border-color: #4e8cff;
+}
+
+/* Button styles */
+.btn, .btn-primary {
+  background: linear-gradient(90deg, #4e8cff 0%, #2a2a40 100%);
+  border: none;
+  color: #fff;
+  font-weight: 500;
+  transition: background 0.2s;
+}
+.btn:hover, .btn-primary:hover {
+  background: linear-gradient(90deg, #2a2a40 0%, #4e8cff 100%);
+  color: #ffd166;
+}
+
+/* Headings */
+h1, h2, h3, h4, h5, h6, .card-title {
+  color: #2a2a40;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+/* Card styles */
+.card {
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(46, 68, 120, 0.08);
+  border: none;
+}
+.card-title {
+  color: #4e8cff;
+}
+
+/* Modal styles */
+.modal-content {
+  border-radius: 12px;
+}
+
+/* Form styles */
+.form-control:focus {
+  border-color: #4e8cff;
+  box-shadow: 0 0 0 0.2rem rgba(78, 140, 255, 0.15);
+}
+
+/* Custom favicon (handled in index.html) */
+
+/* Responsive logo alignment */
+.octofit-logo {
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 12px;
 }
 
 @keyframes App-logo-spin {
