@@ -33,4 +33,4 @@ class Command(BaseCommand):
         Leaderboard.objects.create(user=user1, score=100)
         Leaderboard.objects.create(user=user2, score=80)
 
-        self.stdout.write(self.style.SUCCESS('Database populated with test data.'))
+        print('Populate the octofit_db database with test data')
