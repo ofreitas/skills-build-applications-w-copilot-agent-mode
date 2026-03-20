@@ -13,7 +13,7 @@ function App() {
       <nav className="navbar navbar-expand-lg navbar-light mb-4">
         <div className="container-fluid">
           <Link className="navbar-brand d-flex align-items-center" to="/">
-            <img src={process.env.PUBLIC_URL + '/logo192.png'} alt="Octofit Logo" className="octofit-logo App-logo" />
+            <img src={process.env.PUBLIC_URL + '/octofitapp-small.png'} alt="Octofit Tracker Logo" className="octofit-logo App-logo" />
             Octofit Tracker
           </Link>
           <div className="collapse navbar-collapse">
