@@ -7,12 +7,11 @@ class Command(BaseCommand):
     help = 'Populate the database with test data for Octofit Tracker'
 
     def handle(self, *args, **options):
-        # Clear existing data
-        User.objects.all().delete()
-        Team.objects.all().delete()
-        Activity.objects.all().delete()
-        Workout.objects.all().delete()
-        Leaderboard.objects.all().delete()
+
+        # Clear existing data (delete individually to avoid Djongo ObjectIdField bug)
+        for model in [User, Team, Activity, Workout, Leaderboard]:
+            for obj in model.objects.all():
+                obj.delete()
 
         # Create Teams
         team1 = Team.objects.create(name="OctoRunners", description="Running enthusiasts")
